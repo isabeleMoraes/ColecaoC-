@@ -1,0 +1,27 @@
+create table actionFigure(
+	codigo int primary Key identity,
+	nome varchar(50) not null,
+	qtde int not null,
+	data_compra dateTime not null,
+	obsevacao varchar(100),
+	valor decimal default 0.00,
+	marca int not null,
+	material varchar(50)
+);
+
+drop table actionFigure;
+
+select * from actionFigure;
+
+GRANT
+       ALTER ANY DATABASE,
+       VIEW  ANY DATABASE,
+       VIEW  ANY DEFINITION,
+       CONNECT ANY DATABASE,
+       AUTHENTICATE SERVER,
+       VIEW SERVER STATE,
+	   UPDATE ALL USER SECURABLES,
+       SELECT ALL USER SECURABLES
+TO [root];
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON actionFigure TO [root];
